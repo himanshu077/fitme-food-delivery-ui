@@ -16,6 +16,9 @@
   --black-400: #202020;
   --saffron-400: #fc8019;
   --gray-400: #404040;
+  --gray-300:#808080;
+  --gray-100:#F8F8F8;
+  --green-300:#1AC84B;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -11,7 +11,7 @@ const Footer = () => {
     const image = [{ id: 0, src: FacebookIcon, alt: 'facebook-icon' }, { id: 1, src: InstagramIcon, alt: 'instagram-icon' }, { id: 2, src: TwitterIcon, alt: 'twitter-icon' }];
 
     return (
-        <Box className="bg-[--saffron-400] h-[313px] flex justify-center items-center">
+        <Box className="bg-[--saffron-400] !h-[313px] !flex !justify-center !items-center">
             <Container maxW="79.9vw" mx="auto">
                 <Box className="flex flex-col lg:flex-row justify-center lg:justify-between items-center mb-8">
                     <Image src={LogoIcon} alt="logo-icon" className="mb-4 lg:mb-0 mr-7 lg:mr-0" />

@@ -21,8 +21,8 @@ const Header = () => {
                         </Text>
                     </Box>
                     <Box className="!flex !flex-row !gap-5">
-                        <SearchBar className="font-medium text-base" src={SearchIcon} InputRightClass="!mt-1" InputGroupClass="!w-[24.4vw] !py-[3px] !rounded-[10px] !hidden lg:!inline" size="lg" alt="search-icon" placeholder="Enter item or restaurant you are looking for" />
-                        <Image src={BagIcon} alt="bag-icon" />
+                        <SearchBar className="font-medium text-base" src={SearchIcon} InputRightClass="!mt-1" _placeholder={{ color: "#808080", fontSize: "16px" }} InputGroupClass="!w-[24.4vw] !py-[3px] !rounded-[10px] !hidden lg:!inline md:!inline" size="lg" alt="search-icon" placeholder="Enter item or restaurant you are looking for" />
+                        <Image src={BagIcon} alt="bag-icon" className="lg:!inline !hidden"/>
                         <PrimaryButton className="!bg-[--black-400] !text-white lg:!px-[1.4vw] !my-[3px] lg:!py-0 !py-3 !px-4 !font-semibold !text-sm !rounded-[10px]" title="Sign In" />
                     </Box>
                 </Box>
