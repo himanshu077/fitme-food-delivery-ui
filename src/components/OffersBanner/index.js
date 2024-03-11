@@ -7,9 +7,9 @@ import OfferSvg from "@/assets/svg/Offer.svg"
 
 const OffersBanner = () => {
     return (
-        <Box className="bg-[--black-400] !h-[313px] !flex !justify-center !items-center">
-            <Container maxW='84.4vw' mx="auto">
-                <Box className="!flex lg:!flex-row !flex-col lg:!gap-[4.5vw]">
+        <Box className="bg-[--black-400] xl:!h-[313px] !h-full !py-6 !flex !justify-center !items-center">
+                 <Container mx="auto" className="lg:!max-w-[84.4] !max-w-full">
+                <Box className="!flex lg:!flex-row !flex-col lg:!gap-[4.5vw] !gap-4">
                     <Image src={LunchBox} alt="food-image" />
                     <Box className="!flex !flex-col !justify-center">
                         <Text className="Poppins600 !text-[32px] !text-white">LunchBox - Meals and Thalis</Text>

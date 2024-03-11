@@ -16,10 +16,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <ChakraProvider>
         <body className={inter.className}>
-          <Header/>
+          <Header />
           {children}
-          <Footer/>
-          </body>
+          <Footer />
+        </body>
       </ChakraProvider>
     </html>
   );

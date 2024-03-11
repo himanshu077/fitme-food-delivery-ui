@@ -1,29 +1,43 @@
 import React from 'react'
-import { Box, Text, Container, Divider, Button } from '@chakra-ui/react'
+import { Box, Text, Container, Divider } from '@chakra-ui/react'
 import OffersBanner from '../../../components/OffersBanner'
 import Image from "next/image"
 import AddedFood from "@/assets/svg/AddedFood.svg"
 import PrimaryButton from '../../../common/PrimaryButton'
+import CartItem from '../../../common/CartItem'
+import Link from "next/link"
 
 const ItemsPage = () => {
+
+    const cartItems = [
+        { id: 0, resturantName: "Lunch box", itemName: "Brunch for 2 - Veg", price: "₹599" },
+        { id: 1, resturantName: "Fasso", itemName: "Paneer Signature Rice Bowl (Regular)", price: "₹200" },
+    ]
+
+    const recommended = [
+        { id: 0, name: "Breakfast Box" },
+        { id: 1, name: "Lunch Box" },
+        { id: 2, name: "Combo Box" },
+        { id: 3, name: "Biriyani Box" },
+    ]
+
     return (
-        <Box className="">
+        <Box className="!mt-52 lg:!mt-0">
             <OffersBanner />
-            <Container maxW='84.4vw' mx="auto" className="!my-24">
-                <Box className="!flex lg:!flex-row !flex-col !gap-20">
+            <Container mx="auto" className="!my-24 lg:!max-w-[84.4vw] !max-w-full">
+                <Box className="!flex lg:!flex-row !flex-col lg:!gap-20 !md:gap-12 !gap-6">
                     <Box className="lg:!pl-[4vw]">
-                        <Text className="text-[--saffron-400] text-base font-medium py-1 text-right">Recommended</Text>
-                        <Text className="text-[--black-400] text-base font-medium py-1 text-right">Breakfast Box</Text>
-                        <Text className="text-[--black-400] text-base font-medium py-1 text-right">Lunch Box</Text>
-                        <Text className="text-[--black-400] text-base font-medium py-1 text-right">Combo Box</Text>
-                        <Text className="text-[--black-400] text-base font-medium py-1 text-right">Biriyani Box</Text>
+                        <Text className="text-[--saffron-400] text-base font-medium py-1 lg:!text-right !text-center">Recommended</Text>
+                        {recommended.map((box) => (
+                            <Text className="text-[--black-400] text-base font-medium py-1 lg:!text-right !text-center" key={box.id}>{box.name}</Text>
+                        ))}
                     </Box>
-                    <Divider orientation='vertical' className="!border-l-black !border-l-2" />
-                    <Box className="!flex lg:!flex-row lg:!gap-12 md:!gap-6 !flex-col">
-                        <Box className="!w-[28vw]">
-                            <Text className="Poppins500 !text-xl !leading-[30px] !text-[--black-400] py-2">Brunch for 2 - Veg (Save upto Rs.45)</Text>
-                            <Text className="!font-normal !text-base !leading-[19.36px]">#599</Text>
-                            <Text className="!font-normal !text-base !leading-[22px] !text-[--gray-300]">Brunch: One meal to rule them all! Grab this mega saver combo with your choice of 2 veg wraps, Aloo Paratha (2 pcs), chole and Curd lunchbox and 2 choco lava cakes. This is just bliss on a plate!</Text>
+                    <Divider orientation='vertical' className="!border-l-black !border-l-2 !h-[400px] !hidden lg:!inline" />
+                    <Box className="!flex lg:!flex-row lg:!gap-10 md:!gap-6 !flex-col !mt-3">
+                        <Box className="lg:!w-[28vw] !w-full">
+                            <Text className="Poppins500 !text-xl  lg:!text-left !text-center !leading-[30px] !text-[--black-400] !py-2 ">Brunch for 2 - Veg (Save upto Rs.45)</Text>
+                            <Text className="!font-normal !text-base  lg:!text-left !text-center !leading-[19.36px]">₹599</Text>
+                            <Text className="!font-normal !text-base !leading-[22px] lg:!text-left !text-center !text-[--gray-300]">Brunch: One meal to rule them all! Grab this mega saver combo with your choice of 2 veg wraps, Aloo Paratha (2 pcs), chole and Curd lunchbox and 2 choco lava cakes. This is just bliss on a plate!</Text>
                         </Box>
                         <Box className="!relative">
                             <Image src={AddedFood} alt="added-image" />
@@ -32,41 +46,29 @@ const ItemsPage = () => {
                             </Box>
                         </Box>
                     </Box>
-                    <Box className="lg:!w-[20vw] !w-full">
+                    <Box className="lg:!w-[20vw] !w-full !my-6">
                         <Box className="!flex !justify-between">
                             <Text className="Poppins500 !text-2xl !text-[--black-400]">Cart</Text>
                             <Text className="Poppins500 !text-base !text-[--black-400]">2 Items</Text>
                         </Box>
-                        <Text className="Poppins500 !text-base !text-[--black-400] !pt-4 !pb-2">from <span className="Poppins500 !text-base !text-[--saffron-400]">Lunch box</span></Text>
-                        <Box className="!flex !justify-between !py-2">
-                            <Box>
-                                <Text className="Poppins500 !text-base !text-[--black-400]">Brunch for 2 - Veg</Text>
-                                <Text className="Poppins500 !text-base !text-[--gray-300]">₹599</Text>
-                            </Box>
-                            <Box className="!flex !flex-row !mt-3 !gap-4">
-                                <Text className="!text-[--black-400]">-</Text>
-                                <Text className="!text-[--black-400] !text-xl Poppins400">1</Text>
-                                <Text className="!text-[--black-400]">+</Text>
-                            </Box>
-                        </Box>
-                        <Text className="Poppins500 !text-base !text-[--black-400] !pt-7 !pb-2">from <span className="Poppins500 !text-base !text-[--saffron-400]">Fasso</span></Text>
-                        <Box className="!flex !justify-between !py-2">
-                            <Box>
-                                <Text className="Poppins500 !text-base !text-[--black-400] !break-words">Paneer Signature Rice Bowl (Regular)</Text>
-                                <Text className="Poppins500 !text-base !text-[--gray-300]">₹200</Text>
-                            </Box>
-                            <Box className="!flex !flex-row !mt-3 !ml-3 !gap-4">
-                                <Text className="!text-[--black-400]">-</Text>
-                                <Text className="!text-[--black-400] !text-xl Poppins400">1</Text>
-                                <Text className="!text-[--black-400]">+</Text>
-                            </Box>
-                        </Box>
-                        <Box className="!flex !justify-between">
+                        {cartItems.map((item) => (
+                            <CartItem
+                                key={item.id}
+                                resturantName={item.resturantName}
+                                itemName={item.itemName}
+                                price={item.price}
+                            />
+                        ))}
+                        <Box className="!flex !justify-between !mt-6">
                             <Text className="Poppins500 !text-2xl !leading-9 ">Subtotal</Text>
                             <Text className="Poppins500 !text-2xl !leading-9 ">₹799</Text>
                         </Box>
                         <Text className="Poppins400 !text-sm !text-[--gray-300] ">Extra charges may apply</Text>
-                        <PrimaryButton title="Checkout" className="!bg-[--saffron-400] !text-white !rounded-[10px] !text-2xl Poppins500 !px-[6.86vw] !py-4 !my-6" />
+                        <Box className="!flex !justify-center">
+                            <Link href="/checkout/subscription">
+                                <PrimaryButton title="Checkout" className="!bg-[--saffron-400] !text-white !rounded-[10px] !text-2xl Poppins500 lg:!px-[6.86vw] lg:!py-4 !px-[26vw] !py-3 !my-10" />
+                            </Link>
+                        </Box>
                     </Box>
                 </Box>
             </Container >

@@ -10,6 +10,7 @@ import PriceSvg from "@/assets/svg/PriceSvg.svg"
 import GroupSvg from "@/assets/svg/Group.svg"
 import Title from '../../common/Title'
 import Cards from '../../common/Card'
+import { motion } from "framer-motion"
 
 const PersonalizedRecommendations = () => {
 
@@ -25,21 +26,27 @@ const PersonalizedRecommendations = () => {
             <Box>
                 <Title title="Personalized recommendations" />
                 <Box className="!flex lg:!flex-row md:!flex-row !flex-col lg:!gap-[5.3vw] !my-12">
-                    {recommendedFood.map((data) => (
-                        <Cards
-                            key={data.id}
-                            imageAlt={data.imageAlt}
-                            imageSrc={data.imageSrc}
-                            src={data.src}
-                            alt={data.alt}
-                            title={data.title}
-                            subTitle={data.subTitle}
-                            subTitle2={data.subTitle2}
-                            tag={data.tag}
-                            usersAlt={data.usersAlt}
-                            usersSrc={data.usersSrc}
-                            className="!bg-[--gray-100] "
-                        />
+                    {recommendedFood.map((data,i) => (
+                        <motion.div
+                            initial={{ opacity: 0, translateX: -50, translateY: -50 }}
+                            animate={{ opacity: 1, translateX: 0, translateY: 0 }}
+                            transition={{ duration: 0.5, delay: i * 0.2 }}
+                        >
+                            <Cards
+                                key={data.id}
+                                imageAlt={data.imageAlt}
+                                imageSrc={data.imageSrc}
+                                src={data.src}
+                                alt={data.alt}
+                                title={data.title}
+                                subTitle={data.subTitle}
+                                subTitle2={data.subTitle2}
+                                tag={data.tag}
+                                usersAlt={data.usersAlt}
+                                usersSrc={data.usersSrc}
+                                className="!bg-[--gray-100] "
+                            />
+                        </motion.div>
                     ))}
                 </Box>
             </Box>

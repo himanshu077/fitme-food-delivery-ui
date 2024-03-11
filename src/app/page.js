@@ -10,21 +10,34 @@ import PrimaryButton from '../common/PrimaryButton'
 import FoodImage1 from "../assets/svg/Rectangle1.png"
 import FoodImage2 from "../assets/svg/Rectangle2.png"
 import FoodImage3 from "../assets/svg/Rectangle3.png"
+import Th from "@/assets/svg/th.jpeg"
+import Tr from "@/assets/svg/tr.jpeg"
 import NearbyResturant from '../components/NearbyResturant'
 import RecommendedFood from '../components/RecommendedFood'
 import Banner from '../components/Banner'
 import FoodBanner from '../components/FoodBanner'
 import PersonalizedRecommendations from '../components/PersonalizedRecommendations'
+import { useEffect, useState } from 'react';
+import { motion } from "framer-motion"
 
 export default function Home() {
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const cities = [{ id: 0, city: "Hyderabad" }, { id: 1, city: "Chennai" }, { id: 2, city: "Mumbai" }, { id: 3, city: "Bangalore" }, { id: 4, city: "Delhi" }, { id: 5, city: "Kolkata" },]
-  const foodImage = [{ id: 0, src: FoodImage1, alt: "food-image" }, { id: 1, src: FoodImage2, alt: "food-image" }, { id: 2, src: FoodImage3, alt: "food-image" },]
+  const foodImage = [{ id: 0, src: FoodImage1, alt: "food-image" }, { id: 1, src: FoodImage2, alt: "food-image" }, { id: 1, src: FoodImage2, alt: "food-image" }, { id: 1, src: FoodImage2, alt: "food-image" }]
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % foodImage.length);
+    }, 500);
+
+    return () => clearInterval(interval);
+  }, [foodImage.length]);
 
   return (
     <main className="flex min-h-screen flex-col">
       <Box>
-        <Box className="!mt-28 !ml-[9vw] !flex lg:!flex-row md:!flex-col !flex-col">
+        <Box className="!mt-28 !ml-[9vw] !flex lg:!flex-row md:!flex-col !gap-20 !flex-col">
           <Box>
             <Text className="Poppins500 !text-6xl !text-[--black-400]">Premium <span className="Poppins500 !text-6xl !text-[--saffron-400]">quality</span></Text>
             <Box className="!flex !flex-row !gap-4 !my-3">
@@ -50,11 +63,24 @@ export default function Home() {
               ))}
             </Box>
           </Box>
-          {/* <Box className="!flex !flex-row !gap-12">
-          {foodImage.map((data) => (
-            <Image key={data.id} src={data.src} alt={data.alt} />
-          ))}
-        </Box> */}
+          <Box className="!flex !flex-row !items-center !justify-center !gap-12">
+            {foodImage.map((data, index) => (
+            <motion.div
+            key={data.id}
+            initial={{ opacity: 0, scale: 0.7 }}
+            animate={{ opacity: 1, scale: Math.abs(index - currentIndex) === 1 ? 0.85 : 0.7 }}
+            transition={{ duration: 0.5 }}
+            style={{
+              left: index === currentIndex ? 0 : '50%',
+              transform: index === currentIndex ? 'translateX(-50%)' : 'none',
+              width: index === currentIndex ? '100%' : '45%', // Adjusted width
+              height: 'auto'
+            }}
+          >
+                <Image src={data.src} alt={data.alt} layout="responsive" width={500} height={500} />
+              </motion.div>
+            ))}
+          </Box>
         </Box>
         <Container maxW="84.4vw" mx="auto" className="!flex lg:!flex-row !flex-col !gap-[8vw] !mt-52 !mb-32">
           <NearbyResturant />
