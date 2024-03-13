@@ -58,14 +58,7 @@ const Subscription = () => {
                   </Box>
                 </Box>
                 <Text className="Poppins500 !text-base !py-4">What time do you want us to deliver?</Text>
-                {data.map((index) => (
-                  <TabTable
-                    key={index.id}
-                    label={index.tab}
-                    src={index?.src}
-                    tabClass={index.id % 2 === 0 ? 'text-gray-400' : 'text-saffron-400'}
-                  />
-                ))}
+                <TabTable />
               </Box>
               <Box>
                 <Text className="Poppins500 !text-base !py-4">What’s the plan?</Text>

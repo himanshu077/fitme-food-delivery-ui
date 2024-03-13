@@ -12,7 +12,7 @@ const Banner = () => {
     return (
         <Box className="bg-[--saffron-400] lg:!h-[200px] !h-full !flex !justify-center !items-center">
             <Container mx="auto" className="!my-24 xl:!max-w-[62.4vw] lg:!pt-9 !max-w-full">
-                <Box className="!flex  !justify-center xl:!flex-row !items-center !flex-col !gap-6 mb-8">
+                <Box className="!flex !justify-center xl:!flex-row !items-center !flex-col !gap-6 !mb-8">
                     <Box className="!flex !flex-row !gap-2">
                         <Text className="Poppins600 !text-2xl !text-white">Search by Restaurant</Text>
                         <Image src={TagSvg} alt="tag-image" />

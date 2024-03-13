@@ -19,6 +19,7 @@
   --gray-300:#808080;
   --gray-100:#F8F8F8;
   --green-300:#1AC84B;
+  --loading-bg:#f7e0c9fa;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -43,4 +44,16 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.imageContainer {
+  overflow: hidden; /* Hide overflow to hide images going out of container */
+  position: relative; /* Position container relatively to position absolute images */
+}
+
+.imageContainer > div {
+  position: absolute; /* Position images absolutely */
+  top: 0;
+  left: 0;
+  transition: all 0.5s; /* Transition for smooth animation */
 }

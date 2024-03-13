@@ -27,9 +27,10 @@ const FoodBanner = () => {
     return (
         <Container maxW='84.4vw' mx="auto">
             <Title title="What’s on your mind?" />
-            <Box className="!flex lg:!flex-row md:!flex-row !flex-col !gap-[6.2vw] !my-16">
+            <Box className="!flex lg:!flex-row md:!flex-row !items-center !flex-col !gap-[6.2vw] !my-16">
                 {dishes.map((data, i) => (
                     <motion.div
+                        key={data.id}
                         initial={{ opacity: 0, translateX: 50, translateY: 50 }}
                         animate={{ opacity: 1, translateX: 0, translateY: 0 }}
                         transition={{ duration: 0.5, delay: i * 0.2 }}

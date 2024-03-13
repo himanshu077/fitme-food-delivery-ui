@@ -25,9 +25,10 @@ const PersonalizedRecommendations = () => {
         <Container maxW='84.4vw' mx="auto" className="!my-40">
             <Box>
                 <Title title="Personalized recommendations" />
-                <Box className="!flex lg:!flex-row md:!flex-row !flex-col lg:!gap-[5.3vw] !my-12">
-                    {recommendedFood.map((data,i) => (
+                <Box className="!grid lg:!grid-cols-4 md:!grid-cols-2 !gap-[5.3vw] !my-12">
+                    {recommendedFood.map((data, i) => (
                         <motion.div
+                            key={data.id}
                             initial={{ opacity: 0, translateX: -50, translateY: -50 }}
                             animate={{ opacity: 1, translateX: 0, translateY: 0 }}
                             transition={{ duration: 0.5, delay: i * 0.2 }}

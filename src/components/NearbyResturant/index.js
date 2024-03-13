@@ -24,13 +24,13 @@ const NearbyResturant = () => {
 
     return (
         <Box className="!flex !justify-center !items-center">
-            <motion.div
-                initial={{ opacity: 0, translateX: -50, translateY: -50 }}
-                animate={{ opacity: 1, translateX: 0, translateY: 0 }}
-                transition={{ duration: 0.5 }}
-            >
-                <Container maxW='84.4vw' mx="auto">
-                    <Title title="Nearby Resturant" />
+            <Container maxW='84.4vw' mx="auto">
+                <Title title="Nearby Resturant" />
+                <motion.div
+                    initial={{ opacity: 0, translateX: -50, translateY: -50 }}
+                    animate={{ opacity: 1, translateX: 0, translateY: 0 }}
+                    transition={{ duration: 0.5 }}
+                >
                     <Box className="!grid lg:!grid-cols-2 md:!grid-cols-2 !grid-cols-1 !gap-6 !my-8">
                         {nearbyResturant.map((data) => (
                             <Cards
@@ -52,8 +52,8 @@ const NearbyResturant = () => {
                             />
                         ))}
                     </Box>
-                </Container>
-            </motion.div>
+                </motion.div>
+            </Container>
         </Box>
     )
 }

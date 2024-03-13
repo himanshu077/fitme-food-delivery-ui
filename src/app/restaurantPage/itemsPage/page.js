@@ -6,6 +6,10 @@ import AddedFood from "@/assets/svg/AddedFood.svg"
 import PrimaryButton from '../../../common/PrimaryButton'
 import CartItem from '../../../common/CartItem'
 import Link from "next/link"
+import SearchBar from '../../../common/SearchBar'
+import SearchIcon from '@/assets/svg/SearchIcon.svg';
+import SecondaryButton from '../../../common/SecondaryButton'
+import StarOutlined from "@/assets/svg/StarOutlined.svg"
 
 const ItemsPage = () => {
 
@@ -22,8 +26,26 @@ const ItemsPage = () => {
     ]
 
     return (
-        <Box className="!mt-52 lg:!mt-0">
-            <OffersBanner />
+        <Box className="!mt-32 lg:!mt-0">
+            <Box className="relative !mt-8">
+                <OffersBanner className="relative" />
+                <Box className="lg:flex md:flex hidden lg:flex-row gap-3 absolute -bottom-7 lg:!left-1/3 md:!left-1/4 z-50">
+                    <SearchBar
+                        placeholder="Search for dish"
+                        src={SearchIcon}
+                        size="lg"
+                        InputGroupClass="lg:max-w-[22vw] bg-white rounded-[10px] md:max-w-[43vw] lg:ml-0 ml-8"
+                        className="text-sm font-medium"
+                    />
+                    <SecondaryButton
+                        src={StarOutlined}
+                        alt="image"
+                        title="Favourite"
+                        titleClass="text-[--gray-400]"
+                        className="w-[150px] shadow-md bg-white pr-12 pl-3 py-2 rounded-[10px]"
+                    />
+                </Box>
+            </Box>
             <Container mx="auto" className="!my-24 lg:!max-w-[84.4vw] !max-w-full">
                 <Box className="!flex lg:!flex-row !flex-col lg:!gap-20 !md:gap-12 !gap-6">
                     <Box className="lg:!pl-[4vw]">
@@ -39,9 +61,9 @@ const ItemsPage = () => {
                             <Text className="!font-normal !text-base  lg:!text-left !text-center !leading-[19.36px]">₹599</Text>
                             <Text className="!font-normal !text-base !leading-[22px] lg:!text-left !text-center !text-[--gray-300]">Brunch: One meal to rule them all! Grab this mega saver combo with your choice of 2 veg wraps, Aloo Paratha (2 pcs), chole and Curd lunchbox and 2 choco lava cakes. This is just bliss on a plate!</Text>
                         </Box>
-                        <Box className="!relative">
+                        <Box className="!relative lg:!my-0 md:!my-0 !my-4">
                             <Image src={AddedFood} alt="added-image" />
-                            <Box className="!flex !items-center !justify-center">
+                            <Box className="!flex lg:!items-center lg:!justify-center lg:mx-0 !mx-7">
                                 <PrimaryButton className="!absolute !top-[16.8vh] !text-[--green-300] Poppins500 !shadow-lg !text-base !py-3 !px-5 !bg-white !rounded-[10px]" title="Add +" />
                             </Box>
                         </Box>

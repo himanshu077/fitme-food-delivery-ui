@@ -11,7 +11,7 @@ const DishesCard = ({ imageAlt, imageSrc, title, tag, price, time, timeAlt, time
             overflow='hidden'
             className="!bg-[--gray-100] lg:!p-0 !p-3 lg:!h-[178px] md:!h-[178px]"
         >
-            <Box className="!flex !justify-center !items-center">
+            <Box className="!flex !justify-center !pl-4 !items-center">
             <Image src={imageSrc} alt={imageAlt} className="!mx-4" />
             </Box>
             <Stack>
