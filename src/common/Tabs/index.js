@@ -10,7 +10,7 @@ const TabTable = () => {
     const [selectedIndex, setSelectedIndex] = useState(0);
 
     const tabsData = [
-        { id: 0, tab: '16:30', src: Calender2 },
+        { id: 0, tab: '16:30', src: Calender2, alt:"image" },
         { id: 1, tab: '24 hrs' },
     ];
 
@@ -26,7 +26,7 @@ const TabTable = () => {
                 <TabList>
                     {tabsData.map((data) => (
                         <Tab key={data.id}>
-                            <Image src={data?.src}  alt="image"/>
+                            <Image src={data?.src}  alt={data?.alt}/>
                             <Text className={`${data.id % 2 === 0 ? 'text-[--gray-300]' : 'text-[--saffron-400]'} ml-2`}>{data.tab}</Text>
                         </Tab>
                     ))}

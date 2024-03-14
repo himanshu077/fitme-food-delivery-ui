@@ -15,14 +15,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <ChakraProvider>
-        <body className={inter.className}>
-        <LoadingScreen/>
+      <body className={inter.className} suppressHydrationWarning={true}>
+        <ChakraProvider>
+          <LoadingScreen />
           <Header />
           {children}
           <Footer />
-        </body>
-      </ChakraProvider>
+        </ChakraProvider>
+      </body>
     </html>
   );
 }

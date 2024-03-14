@@ -9,7 +9,6 @@ import SearchBar from '../common/SearchBar'
 import PrimaryButton from '../common/PrimaryButton'
 import FoodImage1 from "../assets/svg/Rectangle1.png"
 import FoodImage2 from "../assets/svg/Rectangle2.png"
-import FoodImage3 from "../assets/svg/Rectangle3.png"
 import Th from "@/assets/svg/th.jpeg"
 import Tr from "@/assets/svg/tr.jpeg"
 import NearbyResturant from '../components/NearbyResturant'

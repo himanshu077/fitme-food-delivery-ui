@@ -29,7 +29,7 @@ const ItemsPage = () => {
         <Box className="!mt-32 lg:!mt-0">
             <Box className="relative !mt-8">
                 <OffersBanner className="relative" />
-                <Box className="lg:flex md:flex hidden lg:flex-row gap-3 absolute -bottom-7 lg:!left-1/3 md:!left-1/4 z-50">
+                <Box className="lg:flex md:flex hidden lg:flex-row gap-3 absolute -bottom-7 lg:!left-1/3 md:!left-1/4 z-10">
                     <SearchBar
                         placeholder="Search for dish"
                         src={SearchIcon}
@@ -46,8 +46,8 @@ const ItemsPage = () => {
                     />
                 </Box>
             </Box>
-            <Container mx="auto" className="!my-24 lg:!max-w-[84.4vw] !max-w-full">
-                <Box className="!flex lg:!flex-row !flex-col lg:!gap-20 !md:gap-12 !gap-6">
+            <Container mx="auto" className="!my-24 lg:!max-w-[84.4vw] !max-w-[90vw]">
+                <Box className="!flex lg:!flex-row !flex-col xl:!gap-20 md:!gap-12 !gap-6">
                     <Box className="lg:!pl-[4vw]">
                         <Text className="text-[--saffron-400] text-base font-medium py-1 lg:!text-right !text-center">Recommended</Text>
                         {recommended.map((box) => (
