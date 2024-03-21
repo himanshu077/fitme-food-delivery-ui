@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["../fitme-food-delivery-ui/src/*"]
+    }
+  }
+}
