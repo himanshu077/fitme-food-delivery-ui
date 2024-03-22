@@ -36,7 +36,7 @@ const FoodBanner = () => {
                         transition={{ duration: 0.5, delay: i * 0.2 }}
                     >
                         <Box key={data.id}>
-                            <Image src={data.src} alt={data.alt} />
+                            <Image src={data.src} alt={data.alt} className='!w-full' />
                             <Text className="Poppins500 !text-base !text-center !text-[--black-400] !my-7">{data.title}</Text>
                         </Box>
                     </motion.div>

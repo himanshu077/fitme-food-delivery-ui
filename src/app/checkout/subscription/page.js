@@ -36,7 +36,7 @@ const Subscription = () => {
             <DeliveryAddress />
             <LocationTitle title="Type of Order" src={LocationSvg} alt="location-image" />
             <Box className="!flex xl:!flex-row md:!flex-row !flex-col !gap-6 !my-6">
-              <SecondaryButton src={Calender} alt="calender" title="Subscription" className="!bg-[--saffron-400] !text-white !py-[15px] !px-6" />
+              <Link href="/checkout/scheduledOrder"><SecondaryButton src={Calender} alt="calender" title="Subscription" className="!bg-[--saffron-400] !text-white !py-[15px] !px-6" /></Link>
               <SecondaryButton src={Calender2} alt="calender" title="Schedule Order" className="!border-[--saffron-400] !border-dashed !border-2 !text-[--gray-400] !py-[15px] !px-6" />
               <SecondaryButton src={Calender2} alt="calender" title="Order Now" className="!border-[--saffron-400] !border-dashed !border-2 !text-[--gray-400] !py-[15px] !px-6" />
             </Box>
@@ -117,9 +117,7 @@ const Subscription = () => {
               <Text className="Poppins500 !text-2xl !leading-9 ">₹7,400.00</Text>
             </Box>
             <Box className="!flex !justify-center">
-              <Link href="/checkout/scheduledOrder">
-                <PrimaryButton title="Proceed To Payment" className="!bg-[--saffron-400] !text-white !rounded-[10px] !text-base Poppins500 lg:!px-[5.4vw] lg:!py-4 md:!px-[5.4vw] md:!py-4 !px-[26vw] !py-3 !my-4" />
-              </Link>
+              <PrimaryButton title="Proceed To Payment" className="!bg-[--saffron-400] !text-white !rounded-[10px] !w-full !text-base Poppins500 !py-3 !my-4" />
             </Box>
           </Box>
         </Box>

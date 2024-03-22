@@ -64,11 +64,11 @@ const ItemsPage = () => {
                         <Box className="!relative lg:!my-0 md:!my-0 !my-4">
                             <Image src={AddedFood} alt="added-image" />
                             <Box className="!flex lg:!items-center lg:!justify-center lg:mx-0 !mx-7">
-                                <PrimaryButton className="!absolute !top-[16.8vh] !text-[--green-300] Poppins500 !shadow-lg !text-base !py-3 !px-5 !bg-white !rounded-[10px]" title="Add +" />
+                                <PrimaryButton className="!absolute !top-[14.7vh] !text-[--green-300] Poppins500 !shadow-lg !text-base !py-3 !px-5 !bg-white !rounded-[10px]" title="Add +" />
                             </Box>
                         </Box>
                     </Box>
-                    <Box className="lg:!w-[20vw] !w-full !my-6">
+                    <Box className="lg:!w-[20vw] !w-full !my-2">
                         <Box className="!flex !justify-between">
                             <Text className="Poppins500 !text-2xl !text-[--black-400]">Cart</Text>
                             <Text className="Poppins500 !text-base !text-[--black-400]">2 Items</Text>

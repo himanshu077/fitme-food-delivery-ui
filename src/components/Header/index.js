@@ -9,7 +9,7 @@ import BagIcon from "@/assets/svg/Bag.svg"
 
 const Header = () => {
     return (
-        <Box className="mt-[60px] !sticky !top-0 !right-0 !left-0 !bg-white !z-20">
+        <Box className="mt-[25px] !sticky !top-0 !right-0 !left-0 !bg-white !z-20">
             <Container maxW="83.99vw" mx="auto">
                 <Box className="flex justify-between !py-4">
                     <Box className="!flex !flex-row !gap-2">
