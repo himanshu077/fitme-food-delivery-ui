@@ -19,14 +19,14 @@ const SearchedResult = () => {
         { id: 2, imageSrc: Ricebowl2, imageAlt: "food-image", title: "Butter Paneer Rice Bowl Large", tag: "The Good Bowl", priceSrc: PriceSvg, PriceAlt: "price", price: "₹299", timeAlt: "time", timeSrc: GroupSvg, timeAlt: "time", time: "20 Mins" },
     ];
     const recommendedRiceBowl = [
-        { id: 0, imageSrc: Ricebowl3, imageAlt: "food-image", title: "Paneer Signature Rice Bowl (Regular)", tag: "Fasso - Wraps & Bowls", priceSrc: PriceSvg, PriceAlt: "price", price: "₹200", timeAlt: "time", timeSrc: GroupSvg, timeAlt: "time", time: "20 Mins" },
-        { id: 1, imageSrc: Ricebowl3, imageAlt: "food-image", title: "Chicken Signature Rice Bowl", tag: "Fasso - Wraps & Bowls", priceSrc: PriceSvg, PriceAlt: "price", price: "₹180", timeAlt: "time", timeSrc: GroupSvg, timeAlt: "time", time: "20 Mins" },
-        { id: 2, imageSrc: Ricebowl4, imageAlt: "food-image", title: "Royal Chicken Rice Bowl (Jumbo)", tag: "Fasso - Wraps & Bowls", priceSrc: PriceSvg, PriceAlt: "price", price: "₹299", timeAlt: "time", timeSrc: GroupSvg, timeAlt: "time", time: "20 Mins" },
+        { id: 0, imageSrc: Ricebowl3, imageAlt: "food-image", title: "Paneer Signature Rice Bowl (Regular)", tag: "Fasso - Wraps & Bowls",  priceSrc: PriceSvg, PriceAlt: "price", price: "₹200", timeAlt: "time", timeSrc: GroupSvg, timeAlt: "time", time: "20 Mins" },
+        { id: 1, imageSrc: Ricebowl3, imageAlt: "food-image", title: "Chicken Signature Rice Bowl", tag: "Fasso - Wraps & Bowls",  priceSrc: PriceSvg, PriceAlt: "price", price: "₹180", timeAlt: "time", timeSrc: GroupSvg, timeAlt: "time", time: "20 Mins" },
+        { id: 2, imageSrc: Ricebowl4, imageAlt: "food-image", title: "Royal Chicken Rice Bowl (Jumbo)", tag: "Fasso - Wraps & Bowls",  priceSrc: PriceSvg, PriceAlt: "price", price: "₹299", timeAlt: "time", timeSrc: GroupSvg, timeAlt: "time", time: "20 Mins" },
     ];
 
     return (
         <Container maxW='84.4vw' mx="auto">
-            <Box className="relative">
+            <Box className="relative !mt-24">
                 <Title title="Search results for “ Rice Bowls”" />
                 <Box className="flex flex-row gap-5 my-12">
                     <PrimaryButton title="Dishes" className="bg-[--saffron-400] text-white Poppins500 text-base lg:px-[1.63vw] rounded-[10px] py-4 px-4" />
@@ -58,17 +58,17 @@ const SearchedResult = () => {
                     {recommendedRiceBowl.map((data) => (
                         <Link href="/restaurantPage/itemsPage">
                             <DishesCard
-                                key={data.id}
-                                imageSrc={data.imageSrc}
-                                imageAlt={data.imageAlt}
-                                PriceAlt={data.PriceAlt}
-                                PriceSrc={data.priceSrc}
-                                title={data.title}
-                                tag={data.tag}
-                                time={data.time}
-                                timeAlt={data.timeAlt}
-                                timeSrc={data.timeSrc}
-                                price={data.price}
+                                 key={data.id}
+                                 imageSrc={data.imageSrc}
+                                 imageAlt={data.imageAlt}
+                                 priceSrc={data.priceSrc}
+                                 priceAlt={data.PriceAlt}
+                                 title={data.title}
+                                 tag={data.tag}
+                                 time={data.time}
+                                 timeAlt={data.timeAlt}
+                                 timeSrc={data.timeSrc}
+                                 price={data.price}
                             />
                         </Link>
                     ))}

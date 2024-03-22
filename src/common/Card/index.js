@@ -8,7 +8,7 @@ const Cards = ({ imageAlt, imageSrc, title, tag, starAlt, starSrc, rating, alt, 
         <Card className={`${className} !rounded-[10px] xl:!max-w-[36.62vw] lg:!max-w-[40vw] md:!max-w-[40vw] !w-full !mx-auto`}>
             <CardBody>
                 <Box className="!flex !justify-center">
-                    <Image src={imageSrc} alt={imageAlt} />
+                    <Image src={imageSrc} alt={imageAlt} className='!w-full'/>
                 </Box>
                 <Stack mt='6' spacing='3' className='!px-4'>
                     <Heading className="Poppins500 !text-xl !leading-[30px] !text-[--black-400]">{title}</Heading>
