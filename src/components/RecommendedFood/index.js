@@ -33,17 +33,7 @@ const RecommendedFood = () => {
                     <Box className="!grid lg:!grid-cols-2 md:!grid-cols-2 !grid-cols-1 !gap-6 !my-8">
                         {recommendedFood.map((data) => (
                             <Cards
-                                key={data.id}
-                                imageAlt={data.imageAlt}
-                                imageSrc={data.imageSrc}
-                                src={data.src}
-                                alt={data.alt}
-                                title={data.title}
-                                subTitle={data.subTitle}
-                                subTitle2={data.subTitle2}
-                                tag={data.tag}
-                                usersAlt={data.usersAlt}
-                                usersSrc={data.usersSrc}
+                                cardData={data}
                                 className="!bg-[--gray-100] "
                             />
                         ))}

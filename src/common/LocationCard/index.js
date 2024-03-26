@@ -11,7 +11,7 @@ const LocationCard = ({ className,textClass,src,address }) => {
                     alt='image'
                 />
                 <Stack mt='6' spacing='3'>
-                    <Text className={` ${textClass} Poppins500 !text-base`}>
+                    <Text className={` ${textClass}`}>
                         {address}
                     </Text>
                 </Stack>

@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Children } from 'react';
 
-const PrimaryButton = ({ title, className }) => {
+const PrimaryButton = ({ children, className,...props }) => {
     return (
-        <button className={className}>
-            {title}
+        <button className={className} {...props}>
+            {children}
         </button>
     );
 };

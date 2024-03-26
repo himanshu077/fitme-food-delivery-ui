@@ -3,12 +3,15 @@ import React from 'react'
 import { Card, CardBody, Heading, Stack, Text, Box } from '@chakra-ui/react'
 import Image from "next/image"
 
-const Cards = ({ imageAlt, imageSrc, title, tag, starAlt, starSrc, rating, alt, src, usersSrc, className, usersAlt, subTitle2, subTitle }) => {
+const Cards = ({ cardData, className }) => {
+
+    const { imageAlt, imageSrc, title, tag, starAlt, starSrc, rating, alt, src, usersSrc, usersAlt, subTitle2, subTitle } = cardData;
+
     return (
         <Card className={`${className} !rounded-[10px] xl:!max-w-[36.62vw] lg:!max-w-[40vw] md:!max-w-[40vw] !w-full !mx-auto`}>
             <CardBody>
                 <Box className="!flex !justify-center">
-                    <Image src={imageSrc} alt={imageAlt} className='!w-full'/>
+                    <Image src={imageSrc} alt={imageAlt} className='!w-full' />
                 </Box>
                 <Stack mt='6' spacing='3' className='!px-4'>
                     <Heading className="Poppins500 !text-xl !leading-[30px] !text-[--black-400]">{title}</Heading>

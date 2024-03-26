@@ -95,7 +95,7 @@ const ScheduledOrder = () => {
                             <Text className="Poppins500 !text-2xl !leading-9 ">₹932.00</Text>
                         </Box>
                         <Box className="!flex !justify-center">
-                            <PrimaryButton title="Proceed To Payment" className="!bg-[--saffron-400] !w-full !text-white !rounded-[10px] !text-base Poppins500 !py-3 !my-4" />
+                            <PrimaryButton className="!bg-[--saffron-400] !w-full !text-white !rounded-[10px] !text-base Poppins500 !py-3 !my-4" >Proceed To Payment</PrimaryButton>
                         </Box>
                     </Box>
                 </Box>

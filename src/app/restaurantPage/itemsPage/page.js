@@ -64,7 +64,7 @@ const ItemsPage = () => {
                         <Box className="!relative lg:!my-0 md:!my-0 !my-4">
                             <Image src={AddedFood} alt="added-image" />
                             <Box className="!flex lg:!items-center lg:!justify-center lg:mx-0 !mx-7">
-                                <PrimaryButton className="!absolute !top-[14.7vh] !text-[--green-300] Poppins500 !shadow-lg !text-base !py-3 !px-5 !bg-white !rounded-[10px]" title="Add +" />
+                                <PrimaryButton className="!absolute !top-[14.7vh] !text-[--green-300] Poppins500 !shadow-lg !text-base !py-3 !px-5 !bg-white !rounded-[10px]" >Add +</PrimaryButton>
                             </Box>
                         </Box>
                     </Box>
@@ -88,7 +88,7 @@ const ItemsPage = () => {
                         <Text className="Poppins400 !text-sm !text-[--gray-300] ">Extra charges may apply</Text>
                         <Box className="!flex !justify-center">
                             <Link href="/checkout/subscription">
-                                <PrimaryButton title="Checkout" className="!bg-[--saffron-400] !text-white !rounded-[10px] !text-2xl Poppins500 lg:!px-[6.86vw] lg:!py-4 !px-[26vw] !py-3 !my-10" />
+                                <PrimaryButton className="!bg-[--saffron-400] !text-white !rounded-[10px] !text-2xl Poppins500 lg:!px-[6.86vw] lg:!py-4 !px-[26vw] !py-3 !my-10" >Checkout</PrimaryButton>
                             </Link>
                         </Box>
                     </Box>

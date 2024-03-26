@@ -63,8 +63,8 @@ const Subscription = () => {
               <Box>
                 <Text className="Poppins500 !text-base !py-4">What’s the plan?</Text>
                 <Box className="!flex !flex-row !gap-6 !py-4">
-                  <PrimaryButton title="3-Days/Week" className="!border !border-[--saffron-400] Poppins500 !text-base !text-[--saffron-400] !rounded-[10px] !px-[25px] !py-[15px] " />
-                  <PrimaryButton title="5-Days/Week" className="!border !border-black Poppins500 !text-base !rounded-[10px] xl:!px-[25px] xl:!py-[15px] md:!px-[25px] md:!py-[15px] !px-[15px] !py-[15px] " />
+                  <PrimaryButton className="!border !border-[--saffron-400] Poppins500 !text-base !text-[--saffron-400] !rounded-[10px] !px-[25px] !py-[15px] " >3-Days/Week</PrimaryButton>
+                  <PrimaryButton className="!border !border-black Poppins500 !text-base !rounded-[10px] xl:!px-[25px] xl:!py-[15px] md:!px-[25px] md:!py-[15px] !px-[15px] !py-[15px] " >5-Days/Week</PrimaryButton>
                 </Box>
                 <Text className="Poppins500 !text-base !py-4">Any Note for us?</Text>
                 <Textarea placeholder='Type you note here' className="xl:!max-w-[365px] md:!max-w-[365px] !w-full !h-[100px] !overflow-auto !border-[1.5px] !border-[--gray-300]" />
@@ -117,7 +117,7 @@ const Subscription = () => {
               <Text className="Poppins500 !text-2xl !leading-9 ">₹7,400.00</Text>
             </Box>
             <Box className="!flex !justify-center">
-              <PrimaryButton title="Proceed To Payment" className="!bg-[--saffron-400] !text-white !rounded-[10px] !w-full !text-base Poppins500 !py-3 !my-4" />
+              <PrimaryButton className="!bg-[--saffron-400] !text-white !rounded-[10px] !w-full !text-base Poppins500 !py-3 !my-4" >Proceed To Payment</PrimaryButton>
             </Box>
           </Box>
         </Box>

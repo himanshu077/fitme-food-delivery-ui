@@ -29,8 +29,8 @@ const SearchedResult = () => {
             <Box className="relative !mt-24">
                 <Title title="Search results for “ Rice Bowls”" />
                 <Box className="flex flex-row gap-5 my-12">
-                    <PrimaryButton title="Dishes" className="bg-[--saffron-400] text-white Poppins500 text-base lg:px-[1.63vw] rounded-[10px] py-4 px-4" />
-                    <PrimaryButton title="Restaurants" className="border border-[--saffron-400] text-[--black-400] Poppins500 text-base lg:px-[1.59vw] rounded-[10px] py-4 px-4" />
+                    <PrimaryButton className="bg-[--saffron-400] text-white Poppins500 text-base lg:px-[1.63vw] rounded-[10px] py-4 px-4" >Dishes</PrimaryButton>
+                    <PrimaryButton className="border border-[--saffron-400] text-[--black-400] Poppins500 text-base lg:px-[1.59vw] rounded-[10px] py-4 px-4" >Restaurants</PrimaryButton>
                 </Box>
                 <Box className="grid xl:grid-cols-3 lg:grid-cols-2 xl:!gap-16 lg:!gap-10 !gap-6">
                     {recommendedBowl.map((data) => (

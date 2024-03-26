@@ -13,13 +13,13 @@ const DeliveryAddress = () => {
             <Box className="!flex lg:!flex-row  md:!flex-row !flex-col lg:!gap-12 !gap-8 !mb-5">
                 <LocationCard
                     address="Dno. 12-34-12, XYC Apartments, DOOR Colony, Hyderabad, Telangana"
-                    className="!bg-[--saffron-400] !my-5"
+                    className="!bg-[--saffron-400] !my-5 Poppins500 !text-base"
                     src={WhiteLocation}
                     textClass="!text-white"
                 />
                 <LocationCard
                     address="Dno. 12-34-12, XYC Apartments, DOOR Colony, Hyderabad, Telangana"
-                    className="!border-dashed !border-2 !border-[--saffron-400] !my-5"
+                    className="!border-dashed !border-2 !border-[--saffron-400] !my-5 Poppins500 !text-base"
                     src={GrayLocation}
                     textClass="!text-[--gray-400]"
                 />

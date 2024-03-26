@@ -34,17 +34,7 @@ const PersonalizedRecommendations = () => {
                             transition={{ duration: 0.5, delay: i * 0.2 }}
                         >
                             <Cards
-                                key={data.id}
-                                imageAlt={data.imageAlt}
-                                imageSrc={data.imageSrc}
-                                src={data.src}
-                                alt={data.alt}
-                                title={data.title}
-                                subTitle={data.subTitle}
-                                subTitle2={data.subTitle2}
-                                tag={data.tag}
-                                usersAlt={data.usersAlt}
-                                usersSrc={data.usersSrc}
+                                cardData={data}
                                 className="!bg-[--gray-100] "
                             />
                         </motion.div>

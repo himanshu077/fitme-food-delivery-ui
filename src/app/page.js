@@ -53,7 +53,7 @@ export default function Home() {
             <Text className="!font-normal !text-base !text-[--gray-400] !my-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</Text>
             <Box className="!flex lg:!flex-row md:!flex-row !flex-col !gap-4">
               <SearchBar placeholder="Enter your delivery location" size="lg" InputGroupClass="lg:!max-w-[33.73vw] md:!max-w-[33.73vw] !max-w-[84vw]" className="!text-sm !font-medium" />
-              <PrimaryButton title="Get Started" className="!bg-[--black-400] !font-semibold !text-sm !leading-4 lg:!px-6  lg:!mr-0 md:!mr-0 !mr-6 lg:!py-0 !py-4 md:!px-4 !text-white !rounded-[10px]" />
+              <PrimaryButton className="!bg-[--black-400] !font-semibold !text-sm !leading-4 lg:!px-6  lg:!mr-0 md:!mr-0 !mr-6 lg:!py-0 !py-4 md:!px-4 !text-white !rounded-[10px]">Get Started</PrimaryButton>
             </Box>
             <Text className="Poppins500 !text-base !text-[--gray-400] !my-4">Popular cities in India</Text>
             <Box className="!flex lg:!flex-row md:!flex-row !flex-wrap !gap-4">

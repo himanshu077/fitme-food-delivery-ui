@@ -19,7 +19,7 @@ const Banner = () => {
                     </Box>
                     <SearchBar placeholder="Enter item or restaurant you are looking for" _placeholder={{ color: 'white', fontSize: "14px" }} size="lg" InputGroupClass="lg:!max-w-[33.7vw] md:!max-w-[50vw] !w-full !border-white !text-white" />
                     <Link href="/searchedresult">
-                        <PrimaryButton className="!bg-[--black-400] !text-white lg:!px-[1.4vw] !my-[3px] lg:!py-[14px] !py-3 !px-4 !font-semibold !text-sm !rounded-[10px]" title="Search Now" />
+                        <PrimaryButton className="!bg-[--black-400] !text-white lg:!px-[1.4vw] !my-[3px] lg:!py-[14px] !py-3 !px-4 !font-semibold !text-sm !rounded-[10px]">Search Now</PrimaryButton>
                     </Link>
                 </Box>
             </Container>
